@@ -35,14 +35,7 @@ BotRouter.get('/bot', async (req, res) => {
 
 			const getAnswer = geIntentResponseAnswer.answer;
 
-        if (getAnswer === undefined) {
-		
-       	  res.status(200).json({ answer: `Sorry, I don't know that,can you rephrase it?` });
-
-				} else {
-			
-          res.status(200).json({ answer: getAnswer });
-        }
+       res.status(200).json({ answer: getAnswer });
 
 
 
