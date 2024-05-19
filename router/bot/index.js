@@ -33,17 +33,13 @@ BotRouter.get('/bot', async (req, res) => {
 
        const geIntentResponseAnswer = await manager.process('en', queryparams);
 
-			const getAnswer = geIntentResponseAnswer.answer;
+		  	const getAnswer = geIntentResponseAnswer.answer;
 
-        if (getAnswer) {
-		
-          res.status(200).json({ answer: getAnswer });
-
-
-				} else {
-       	     res.status(200).json({ answer: `Sorry, I don't know that,can you rephrase it?` });
-			
-        }
+          if (getAnswer === undefined) {
+						res.status(200).json({ answer: `Sorry, I don't know that,can you rephrase it?` });
+					} else {
+						res.status(200).json({ answer: getAnswer });
+					}
 
 
 
