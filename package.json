@@ -1,0 +1,19 @@
+{
+  "name": "audioviualbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "node-nlp": "3.10.2",
+    "nodemon": "^3.1.0"
+  }
+}
